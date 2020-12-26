@@ -25,3 +25,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
+deploy:
+  provider: heroku
+  api_key: $heroku_key
+  app: your-heroku-app-name
